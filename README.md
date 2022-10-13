@@ -4,8 +4,8 @@ test task
 //用于存放考核代码的位置
 
 # 进度汇报
-已完成Ubuntu和Windows双系统配置endl;
-     Ubuntu编译器vscode配置完成endl;
+已完成Ubuntu和Windows双系统配置
+     Ubuntu编译器vscode配置完成
      Windows编译器vs2022上配置opencv完成
 |日期|学习过程|遇到问题|解决过程|
 |--------|--------|--------|--------|
