@@ -3,27 +3,27 @@ test task
 # 考核任务
 //用于存放考核代码的位置
 色块识别
-#include<opencv2/opencv.hpp>
-#include<iostream>
-
-using namespace std;
-using namespace cv;
-int main()
-{
-	Mat img,img_gray,dst;
-	img = imread("D:\\Edge download\\Picture\\OpencvSave\\tag.png");
-	if (img.empty()) {
-		cout << "could not load image...\n";
-		return -1;
-	}
-	cvtColor(img, img_gray, COLOR_BGR2GRAY);
-	threshold(img_gray, dst, 125, 255, THRESH_BINARY);
-	imshow("original", img);
-	imshow("img_gary	output",img_gray);
-	imshow("dst output", dst);
-
-	waitKey(0);
-	return 0;
+#include<opencv2/opencv.hpp>  
+#include<iostream>  
+  
+using namespace std;  
+using namespace cv;  
+int main()  
+{  
+	Mat img,img_gray,dst;  
+	img = imread("D:\\Edge download\\Picture\\OpencvSave\\tag.png");  
+	if (img.empty()) {  
+		cout << "could not load image...\n";  
+		return -1;  
+	}  
+	cvtColor(img, img_gray, COLOR_BGR2GRAY);  
+	threshold(img_gray, dst, 125, 255, THRESH_BINARY);  
+	imshow("original", img);  
+	imshow("img_gary",img_gray);  
+	imshow("dst output", dst);  
+  
+	waitKey(0);  
+	return 0;  
 }
 
 # 进度汇报
