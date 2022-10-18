@@ -16,7 +16,7 @@ int main()
 	}
 	# 定义边缘化后的图像  
 	Mat edge;
-	# 进行高斯模糊
+	# 进行两次高斯模糊，去除噪点
 	GaussianBlur(img, dst, Size(3, 3), 9, 9);
 	GaussianBlur(dst, dst, Size(1, 1), 9, 9);
 	# 进行色彩空间转换，转灰度以方便二阶导边缘化  
