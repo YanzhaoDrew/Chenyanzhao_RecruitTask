@@ -1,9 +1,8 @@
 # ChenYanzhao_RecruitTask
-test task  
-为源.cpp
+test task
 # 考核任务
-//用于存放考核代码的位置
-色块识别
+色块识别  
+代码在源.cpp中
 
 
 # 进度汇报
