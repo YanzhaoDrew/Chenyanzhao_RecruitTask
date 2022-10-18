@@ -21,8 +21,9 @@ int main()
 	GaussianBlur(dst, dst, Size(1, 1), 9, 9);
 	# 进行色彩空间转换，转灰度以方便二阶导边缘化  
 	cvtColor(dst, img_gray, COLOR_BGR2GRAY);
-	# 进行拉普拉斯二阶导数计算  
-	Laplacian(img_gray, edge, CV_16S, 3);
+	# 进行两次拉普拉斯二阶导数计算，使色块边缘更加明显
+	Laplacian(img_gray, edge, CV_16S, 1, 1, 0, BORDER_DEFAULT);
+	Laplacian(edge, edge, CV_16S, 1, 1, 0, BORDER_DEFAULT);
 	# 进行取绝对值  
 	convertScaleAbs(edge, edge);
 	# 显示结果
