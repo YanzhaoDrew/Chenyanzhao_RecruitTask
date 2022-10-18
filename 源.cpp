@@ -17,7 +17,8 @@ int main()
 	# 定义边缘化后的图像  
 	Mat edge;
 	# 进行高斯模糊
-	GaussianBlur(img, dst, Size(3, 3), 0, 0);
+	GaussianBlur(img, dst, Size(3, 3), 9, 9);
+	GaussianBlur(dst, dst, Size(1, 1), 9, 9);
 	# 进行色彩空间转换，转灰度以方便二阶导边缘化  
 	cvtColor(dst, img_gray, COLOR_BGR2GRAY);
 	# 进行拉普拉斯二阶导数计算  
