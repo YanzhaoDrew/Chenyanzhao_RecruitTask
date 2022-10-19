@@ -34,8 +34,9 @@ int main()
 	Mat distanceImg;
 	distanceTransform(edge2, distanceImg, DIST_L1, 5, 5);
 	normalize(distanceImg, distanceImg, 0, 1.2, NORM_MINMAX);
+	# 再次进行二值化
 	threshold(distanceImg, distanceImg, 0.3, 1, THRESH_BINARY);
-	#腐蚀化
+	# 腐蚀化
 	Mat kernel = getStructuringElement(MORPH_RECT, Size(13, 13), Point(-1, -1));
 	Mat erodeImg;
 	morphologyEx(distanceImg, erodeImg, MORPH_ERODE, kernel);
