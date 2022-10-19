@@ -27,7 +27,7 @@ int main()
 	# 进行取绝对值  
 	convertScaleAbs(edge2, edge2);
 	# 显示结果
-	imshow("Ê¶±ð", edge2);
+	imshow("初始", edge2);
 	# 为使效果更佳，使用二值化，设置阈值  
 	threshold(edge2, edge2, 0, 255, THRESH_OTSU | THRESH_BINARY);
 	# 距离变换和归一化
@@ -41,7 +41,7 @@ int main()
 	Mat erodeImg;
 	morphologyEx(distanceImg, erodeImg, MORPH_ERODE, kernel);
 	# 显示图像
-	imshow("¶þÖµ»¯ºó", distanceImg);
+	imshow("识别结果", distanceImg);
 	waitKey(0);
 	return 0;
 }
